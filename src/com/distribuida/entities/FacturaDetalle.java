@@ -17,7 +17,6 @@ public class FacturaDetalle {
 		this.idFacturaDetalle = idFacturaDetalle;
 		this.cantidad = cantidad;
 		this.subtotal = subtotal;
-		this.num_paginas = num_paginas;
 		this.factura = factura;
 		this.libro = libro;
 	}
@@ -50,9 +49,7 @@ public class FacturaDetalle {
 		return num_paginas;
 	}
 
-	public void setNum_paginas(double num_paginas) {
-		this.num_paginas = num_paginas;
-	}
+
 
 	public Factura getFactura() {
 		return factura;

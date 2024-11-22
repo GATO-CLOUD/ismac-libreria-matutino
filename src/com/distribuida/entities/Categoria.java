@@ -43,3 +43,5 @@ public String toString() {
 	return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + ", descripcion=" + descripcion + "]";
 }
 }
+
+
