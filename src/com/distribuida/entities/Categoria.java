@@ -1,6 +1,16 @@
 package com.distribuida.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categoria")
 public class Categoria {
+	@Id
+	@Column(name = "id_categoria")  // Especifica el nombre exacto de la columna
+	
 	private int idCategoria;
 	private String categoria;
 	private String descripcion;

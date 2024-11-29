@@ -5,7 +5,7 @@
 	id="WebApp_ID" version="3.1">
 	
 	<display-name>spring-mvc-crud</display-name>
-
+ 
   	<absolute-ordering />
 	
 	<welcome-file-list>
@@ -21,7 +21,7 @@
 	      <param-value>/WEB-INF/ApplicationContext.xml</param-value>
 	    </init-param>
     <load-on-startup>1</load-on-startup>
-  	</servlet>  
+  	</servlet>
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
@@ -29,5 +29,3 @@
 			
    
 </web-app>
-
-

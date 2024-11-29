@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
     xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -11,14 +11,15 @@
 		http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
-
+ 
 	<!-- Paquete de escaneo de componentes -->
 	<context:component-scan base-package="com.distribuida" />		
- 	<!-- <context:property-placeholder location="classpath:datosEmpresa.properties"/> -->
+	<!-- <context:property-placeholder location="classpath:datosEmpresa.properties"/> -->
 	
 <!-- 	<context:property-placeholder location="classpath:./application.properties"/> -->
+
 	
 	<!-- MVC -->
 	<mvc:annotation-driven></mvc:annotation-driven>
@@ -29,16 +30,16 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-
-
+ 
+ 
     <!-- Origen BBDD y connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/dblibreria" />
         <property name="user" value="root" />
-        <property name="password" value="root" /> 
-
+        <property name="password" value="root" />
+ 
         <!-- Propiedades connection pool para C3P0 -->
         <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="20" />
@@ -57,7 +58,7 @@
 		   </props>
 		</property>
    </bean>	  
-
+ 
     <!--  Configuración Hibernate transaction manager -->
 	<bean id="miTransactionManager"
             class="org.springframework.orm.hibernate5.HibernateTransactionManager">
@@ -66,10 +67,9 @@
     
     <!-- Habilitar configuración de transacciones basadas en anotaciones -->
 	<tx:annotation-driven transaction-manager="miTransactionManager" />
-
+ 
 	<!-- para css -->
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	
-
+ 
 </beans>
-
