@@ -31,7 +31,7 @@ public class FacturaDAOImpl implements FacturaDAO {
 	public Factura findOne(int id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return null;
+		return session.get(Factura.class, id);
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class FacturaDAOImpl implements FacturaDAO {
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		session.delete(id);
+		session.delete(findOne(id));
 
 	}
 

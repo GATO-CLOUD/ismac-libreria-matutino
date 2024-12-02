@@ -17,8 +17,8 @@ public class CategoriaDAOPrincipal {
         CategoriaDAO categoriaDAO = context.getBean("categoriaDAOImpl", CategoriaDAO.class);
  
         // INSERT (Crear una nueva categoría)
-        //Categoria categoria = new Categoria(0, "Ficcion", "Aventura");
-        //categoriaDAO.add(categoria);  // Descomentar para insertar la categoría en la base de datos
+        Categoria categoria = new Categoria(0, "Ficcion", "Aventura");
+        categoriaDAO.add(categoria);  // Descomentar para insertar la categoría en la base de datos
  
         // UPDATE (Actualizar una categoría existente)
         //Categoria categoria2 = new Categoria(1, "Aventura", "Novela");
@@ -33,7 +33,7 @@ public class CategoriaDAOPrincipal {
         //}
  
          //DELETE (Eliminar una categoría por ID)
-        categoriaDAO.del(39);  // Descomentar para eliminar la categoría con ID 1
+        //categoriaDAO.del(39);  // Descomentar para eliminar la categoría con ID 1
  
         // FIND ALL (Obtener todas las categorías)
         List<Categoria> categorias = categoriaDAO.findAll();
