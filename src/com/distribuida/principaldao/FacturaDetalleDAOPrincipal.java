@@ -10,7 +10,7 @@ import com.distribuida.dao.FacturaDAO;
 import com.distribuida.entities.Cliente;
 import com.distribuida.entities.Factura;
 
-public class FacturaDAOPrincipal {
+public class FacturaDetalleDAOPrincipal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -55,7 +55,7 @@ public class FacturaDAOPrincipal {
 		
 		//findOne
 		try {
-		Factura factura3 = facturaDAO.findOne(84);
+		Factura factura3 = facturaDAO.findOne(86);
 		System.out.println(factura3.toString());
 		}catch(Exception e) {
 			// TODO handle exception	

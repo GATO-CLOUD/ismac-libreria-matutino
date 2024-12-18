@@ -13,3 +13,4 @@ public interface FacturaDAO {
 	public void delete(int id);
 	
 }
+ 	
