@@ -86,7 +86,6 @@
 		
 		$('#btnAgregar').on('click', function(){
 			window.location.href='${pageContext.request.contextPath}/clientes/findOne?opcion=1'; return false;
-			window.location.href='${pageContext.request.contextPath}/clientes/findOne?opcion=1'; return false;
 		});
 		
 	</script>
