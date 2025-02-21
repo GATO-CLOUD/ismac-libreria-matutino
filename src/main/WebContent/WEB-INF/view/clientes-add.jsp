@@ -2,41 +2,82 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ventas - Biblioteca</title>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css" />
+	
 </head>
 <body>
+<nav></nav>
+<section>
 
-<h1>Clientes</h1>
-
-<form action="add" method="POST">
-
-	<input type="hidden" id="idCliente" name="idCliente"value="${cliente.idCliente}"/>
+<div class="container" style="padding-top: 5px;">
+		<h1>Clientes</h1>
+	</div>
 	
-	Cedula
-	<input type="text"id="cedula"name="cedula" value="${cliente.cedula}"/>
-	<br/>
-	Nombre
-	<input type="text"id="nombre"name="nombre" value="${cliente.nombre}"/>
-	<br/>
-	Apellido
-	<input type="text"id="apellido"name="apellido" value="${cliente.apellido}"/>
-	<br/>
-	Direccion
-	<input type="text"id="direccion"name="direccion" value="${cliente.direccion}"/>
-	<br/>
-	Telefono
-	<input type="text"id="telefono"name="telefono" value="${cliente.telefono}"/>
-	<br/>
-	Correo
-	<input type="email"id="correo"name="correo" value="${cliente.correo}"/>
-	<br/>
+	<div class="container">
+		<form action="add" method="Post">
+ 
+	<input type="hidden" id="idCliente" name="idCliente" value="${cliente.idCliente}" />
 	
-	<button type="submit">Guardar</button>
-<button onclick="window.locatio.href='/ismac-libreria-matutino-web/clientes/findAll'; return false;">Cancelar</button>
-
+	<div class="form-group">
+	<label for="cedula" class="form-Label">Cédula</label>
+	<input class="form-control" type="text" id="cedula" name="cedula" value="${cliente.cedula}" />
+	</div>
+	
+	<div class="form-group">
+	<label for="nombre" class="form-Label">Nombre</label>
+	<input class="form-control" type="text" id="nombre" name="nombre" value="${cliente.nombre}" />
+	</div>
+	
+	
+	<div class="form-group">
+		<label for="apellido" class="form-label">apellido</label>
+		<input class="form-control" type="text" id="apellido" name="apellido" value="${cliente.apellido}" />
+		</div>
+		
+		
+	<div class="form-group">
+		<label for="direccion" class="form-label">direccion</label>
+		<input class="form-control" type="text" id="direccion" name="direccion" value="${cliente.direccion}" />
+		</div>
+		
+	<div class="form-group">
+		<label for="telefono" class="form-label">telefono</label>
+		<input class="form-control" type="text" id="telefono" name="telefono" value="${cliente.telefono}" />
+		</div>
+		
+	<div class="form-group">
+		<label for="correo" class="form-label">correo</label>
+		<input class="form-control" type="text" id="correo" name="correo" value="${cliente.correo}" />
+		</div>
+		<div style="text-aling: rigth; padding-top: 5px;">
+		
+			<button class="btn btn-primary" type="submit">Guardar</button>
+			<button class="btn btn-primary cancelar-btn">Cancelar</button>
+		
+		</div>		
+		
 </form>
-
+</div>
+</section>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.7.1.min.js"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table-es-MX.min.js"></script>
+ 	<script type="text/javascript">
+ 	$(document).ready(function(){
+	    // Evento para el botón de "Actualizar"
+	  
+	    $(".cancelar-btn").on("click", function() {
+	                    window.location.href = '${pageContext.request.contextPath}/clientes/findAll;
+	        
+	    });
+	});
+ 	</script>
 </body>
 </html>

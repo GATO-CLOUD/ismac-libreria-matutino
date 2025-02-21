@@ -7,8 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<nav></nav> 
 
-	<h1>Clientes</h1>1
+<section>
+	<h1>Clientes</h1>
 	
 	<form action="del" method="get">
 	<input type="hidden" id="idCliente"name="idCliente" value="${cliente.idCliente}"/>
@@ -17,5 +19,13 @@
 		<button type="submit">Guardar</button>
 		<button onclick="window.location.href='/ismac-libreria-matutino-web/clientes/findAll'; return false;">Cancelar</button>		
 </form>
+
+</section>
+
+<footer>
+
+</footer>
+
+
 </body>
 </html>
